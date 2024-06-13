@@ -47,7 +47,7 @@ end
 
 Return the `p` quantile of the univariate mixture distribution `d`
 
-Adapted from quantile() from Distributions.jl, original has a problem with the bisect algorithm. 
+Adapted from quantile() from Distributions.jl, original has a (problem)[https://github.com/JuliaStats/Distributions.jl/issues/1869] with the bisect algorithm. 
 
 The initial interval does not contain solution, solved by ±0.000001
 """
