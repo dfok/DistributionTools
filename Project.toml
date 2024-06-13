@@ -1,0 +1,9 @@
+name = "DistributionTools"
+uuid = "632a7a5a-a35a-4ab3-af8d-f5af9c160ae2"
+authors = ["Dennis Fok <dfok@ese.eur.nl>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+GaussianDistributions = "43dcc890-d446-5863-8d1a-14597580bb8d"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
