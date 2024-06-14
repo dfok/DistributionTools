@@ -1,6 +1,6 @@
 # DistributionTools.jl Documentation
 This package is not registered, to install use
-`Pkg.add("https://github.com/dfok/DistributionTools)`
+`Pkg.add("https://github.com/dfok/DistributionTools.jl)`
 
 DistributionTools provides some functions to work with a few multivariate distributions from [Distributions.jl](https://github.com/JuliaStats/Distributions.jl). The main additions are functions to obtain marginal and conditional distributions.
 
