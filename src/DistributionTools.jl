@@ -59,6 +59,8 @@ function my_quantile(d::UnivariateMixture{Continuous}, p::Real)
     Distributions.quantile_bisect(d, p, min_q, max_q)
 end
 
+my_quantile(d::Distribution, p) = quantile(d, p)
+
 # Marginals of various multivariate distributions
 """
     marginal(d::MvNormal, ind::Int)
@@ -128,7 +130,7 @@ end
 Return the marginal distribution of element `ind` from a multivariate t distribution `d`
 """
 function marginal(d::MvTDist, ind::Int)
-    return TDist(d.df, d.μ[ind], d.Σ[ind,ind])
+    return MvTDist(d.df, [d.μ[ind]], fill(d.Σ[ind,ind],1,1))
 end
 
 """
