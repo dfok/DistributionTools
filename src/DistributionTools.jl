@@ -1,6 +1,7 @@
 module DistributionTools
 
 using Distributions
+import Distributions:quantile
 using GaussianDistributions
 import GaussianDistributions: cdf
 
@@ -9,7 +10,7 @@ using LinearAlgebra
 export marginal, conditional, my_quantile, cor2var, var2cor, cdf
 
 """
-    var2cor(m)
+    var2cor(m)]
     
 Transform a variance matrix to a correlation matrix
 """
@@ -140,6 +141,17 @@ Return the marginal distribution of elements `ind` (vector) from a multivariate 
 """
 function marginal(d::MvTDist, ind::Array{Int,1})
     return MvTDist(d.df, d.μ[ind], d.Σ[ind,ind])
+end
+
+"""
+    quantile(d::MvTDist, p)
+
+Return the `p` quantile of a 1-dimensional MvTDist (errors if dimension>1)
+"""
+function quantile(d::MvTDist, p)
+    length(d)==1 || @error "Distribution should be univariate for quantile"
+
+    d.μ[1] + sqrt(d.Σ[1,1])*quantile(TDist(d.df), p) 
 end
 
 

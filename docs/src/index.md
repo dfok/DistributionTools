@@ -24,5 +24,6 @@ conditional
 cor2var
 var2cor
 my_quantile
+quantile
 cdf
 ```
