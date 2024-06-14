@@ -97,7 +97,7 @@ function marginal(d::MvLogNormal, ind::Array{Int,1})
 end
 
 """
-    marginal(d::Mixture, ind::Int)
+    marginal(d::MixtureModel, ind::Int)
 
 Return the marginal distribution of element `ind` from a multivariate mixture distribution `d`
 """
@@ -110,7 +110,7 @@ function marginal(d::MixtureModel{Multivariate,Continuous,<:Distribution,<:Discr
 end
 
 """
-    marginal(d::Mixture, ind::Array{Int,1})
+    marginal(d::MixtureModel, ind::Array{Int,1})
 
 Return the marginal distribution of elements `ind` (vector) from a multivariate mixture distribution `d`
 """
