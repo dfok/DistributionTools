@@ -7,7 +7,7 @@ import GaussianDistributions: cdf
 
 using LinearAlgebra
 
-export marginal, conditional, my_quantile, cor2var, var2cor, cdf
+export marginal, conditional, my_quantile, cor2var, var2cor, cdf, quantile
 
 """
     var2cor(m)]
