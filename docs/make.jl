@@ -3,5 +3,5 @@ push!(LOAD_PATH,"../src/")
 makedocs(modules = [DistributionTools], sitename="DistributionTools.jl")
 
 deploydocs(
-    repo = "github.com/dfok/DistributioTools.jl.git",
+    repo = "github.com/dfok/DistributionTools.jl.git",
 )
